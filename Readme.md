@@ -1,2 +1,2 @@
-Primeiros comandos basicos de HTML e CSS 
-- Aula fornecida por : Rafaella Ballerini
+Primeiros comandos basicos de HTML e CSS na construção de um formulario 
+- Aula fornecida por :  Rafaella Ballerini
