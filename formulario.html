@@ -15,7 +15,6 @@ html:5 (enter) monta a Estrtura DO HTML
         <p>Complete sua Informação abaixo</p>
         <br>
     </div>
-
     <form>
         <fieldset>
             <div>
@@ -35,7 +34,7 @@ html:5 (enter) monta a Estrtura DO HTML
         <div>
             <label>De qual lado da aplicação voçe desenvolve?</label>
             <label>
-                <input type = "radio" name="devweb" value="backend">Back-End
+                <input type = "radio" name="devweb" value="backend" checked>Back-End
             </label>
             <label>
                 <input type = "radio" name="devweb" value="frontend">Front-End
@@ -43,7 +42,41 @@ html:5 (enter) monta a Estrtura DO HTML
             <label>
                 <input type = "radio" name="devweb" value="fullstack">Fullstack
             </label>
+            <label>
+                <input type ="radio" name="devweb" value ="nada_odeio_dev"> Nada
+            </label>
         </div>
+
+        <div>
+            <label>SeniorIdade</label>
+            <select id="seniorIdade" name="seniorIdade">
+                <option selected disabled value=""> Selecione uma opção</option>
+                <option value="Senior">Senior</option>
+                <option value="Junio">Junio</option>
+                <option value="pleno">Pleno </option>
+            </select>
+        </div>
+
+        <fieldset>
+            <div>
+                <label>Selecione a Linguagem Dominante</label>
+                <input type="checkbox" name="linguagem1" id="linguagem1" value="PHP">
+                <label for="linguagem1">PHP</label>
+                <input type="checkbox" name="linguagem2" id="linguagem2" value ="Java">
+                <label for="linguagem2">Java</label>
+                <input type="checkbox" name="linguagem3" id="linguagem3" value ="kOtlin">
+                <label for="linguagem3">kOtlin</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <br>
+            <label>Como sua sua Experiencia</label>
+            <textarea row="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+
+        </div>
+
+        <button type="submit">Concluido</button>
     </form>
 </body>
 </html>
@@ -74,8 +107,32 @@ name="viewport" -> Para dispositivos moveis
 type="text" ou type="email" ou type = "radio"-> o type já tem varios tipos de informação declarada 
 placeholder -> espaço reservado.
 
+checked-> onde o arquivo vem pre selecionado 
 
 
+<select id="SeniorIdade">
+    select lista e opção  e precida de um - Id -
+    <option value ="o nome">
+             selected -> Pre selecionado no option
+             disabled -> Desabilita 
+             value="" -> valor nulo pq não é uma opção aceitavel.
+
+
+type="checkbox"
+<fielset> 
+    <div>
+        label ->Coleção de checkbox
+          input - value="PHP" definido o valor do checkbox
+             <label for="linguagem1">PHP</label> (checkbox)  -> o valor aparecer do lado usar o for quando é ligado direto 
+
+
+
+<textarea -> lugar onde fica o texto grande  quase um input do tipo text em grande escala 
+    row="6" -> quantas linhas ""
+
+type="submit" 
+    significar que quero enviar o formulario geralmente em um botao 
+<button type="submit">Concluido</button>
 =========OBS=====================
 Regras : 
 <div> sempre dividindo o bloco
@@ -85,4 +142,8 @@ o <input> do type radio dentro de label com a  label geral
 cada radio gera um label dentro do titulo da label 
 
 dentro de label pq tem o titulo e como se trata de um type= "radio" ele tem varias opção de label
+
+
+No radio o input é dentro do label 
+No checkbox o input é acima do label em questão
 -->
