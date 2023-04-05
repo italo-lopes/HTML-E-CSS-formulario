@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+<style type="text/css">
+     .container {
+         display: flex;
+        /*por padrao vem :->     ----- flex-direction: row;------------
+        flex-direction: row;
+        flex-direction: row-reverse;
+        flex-direction: column-reverse;
+        flex-direction: column;
+        */
+         flex-direction: row;
+         /*
+         padding-top: 10px;
+         padding-bottom: 10px;
+         padding-right: 10px;  padding ao redor da div -> backgournd-color:
+         padding-left: 10px;
+         */
+         justify-content:  flex-start;
+         /*
+         justify-content -> Organiza no modelo horizotal sua posição - esquerta - direita 
+         justify-content: center;
+         justify-content: flex-end;
+         justify-content: flex-start;
+         justify-content: space-between;
+         justify-content: space-around;  
+         */
+         height: 260px; 
+         /* 
+            Precisa ser devinido o tamanho da div pai pra usar o  align-items: 
+            Ja que é uma movimentação vertical
+         */
+         align-items: flex-start;
+         /*
+          align-items -> Organiza o item vertical - cima - baixo  uma linha de cada 
+          align-items: stretch;
+          align-items: flex-start;
+          align-items: flex-end;
+          align-items: center;
+          align-items: baseline -> tem como base o tamanho da letra pra determinar sua posição ;
+         */
+         flex-wrap: wrap;
+         /*
+         Pra alinhar varias linhas na vertical 
+         */
+         align-content: flex-start;
+        /*
+        align-content -> o grupo de linha do content
+         align-content: flex-end;
+         align-content: flex-start;
+         align-content: center;
+         align-content: space-between;
+         align-content: space-around;
+         */
+         /*
+         OU 
+         gap: 20px 20px;
+         */
+         padding: 10px 20px 10px 20px;
+         border: 2px solid black;
+         background-color: rebeccapurple;
+
+    }
+
+    .container2 {
+         display: flex;
+         flex-direction: row;
+         justify-content:  center;
+         height: 260px; 
+         align-items: stretch;
+         padding: 10px 20px 10px 20px;
+         border: 2px solid black;
+         background-color: rebeccapurple;
+
+    }
+    .container3 {
+         display: flex;
+         flex-direction: row;
+         justify-content:  center;
+         padding: 10px 20px 10px 20px;
+         border: 2px solid black;
+         background-color: red;
+
+    }
+    .container4 {
+        /* determiando espado pelo gap , row-gap, column-gap*/
+         display: flex;
+         flex-direction: row;
+         justify-content:  center;
+         height: 200px;
+         align-items: center;
+         flex-wrap: wrap-reverse;
+         gap: 20px 20px;
+         padding: 10px 20px 10px 20px;
+         border: 2px solid black;
+         background-color: red;
+
+    }
+    .container5 {
+        /* determiando espado pelo gap , row-gap, column-gap*/
+         display: flex;
+         flex-direction: row;
+         justify-content:  center;
+         align-items: center;
+         flex-wrap: wrap;
+         align-content: center;
+         row-gap: 10px;
+         column-gap: 30px;
+         padding: 10px 20px 10px 20px;
+         border: 2px solid black;
+         background-color: red;
+
+    }
+    .div1, .div2, .div3{
+         padding-bottom: 60px;
+         padding-right: 60px; /* padding tamanho da div -> backgournd-color:*/
+         padding-left: 60px;
+         border: 1px solid black; /* width,type, color */
+         border-radius: 5px;
+    }
+    .div1{
+         color: black;
+         background-color: pink;
+    }
+    .div2{
+         color: black;
+         background-color: yellow;
+
+    }
+    .div3{
+         color: black;
+         background-color: blueviolet;
+    }
+</style>
+</head>
+<body>
+   <div>
+      <h1>
+         Eixo principal no inicio (row) (flex-star) com perpenciluar no inicio (flex-start) com altura definida e quebra de linha pra baixo e tudo pra cima.
+      </h1>
+   </div>
+      <br>
+    <div class="container">
+        <div class ="div1"> 
+           1
+        </div>
+        <div class ="div2">
+           2
+        </div>
+        <div class ="div3">
+            3
+         </div>
+         <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>        
+    </div>
+     <br>
+     <div>
+      <h1>
+         Eixo principal no centro (row)  com perpenciluar prenchendo todo o espaçoo  (stretch) com altura definida.
+      </h1>
+      </div>
+      <br>
+    <div class="container2" >
+        <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+         </div>
+    </div>
+    <br>
+    <div>
+      <h1>
+         Tudo no centro sem quebra de linha  e sem eixo perpendicular
+      </h1>
+      </div>
+      <br>
+    <div class="container3" >
+        <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+         </div>
+    </div>
+    <br>
+    <div>
+      <h1>
+         Tudo no centro com espaço determinado e quebra de linha  pra cima com altura definida
+      </h1>
+      </div>
+      <br>
+    <div class="container4">
+        <div class ="div1"> 
+           1
+        </div>
+        <div class ="div2">
+           2
+        </div>
+        <div class ="div3">
+            3
+         </div>
+         <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>
+          <div class ="div1"> 
+            1
+         </div>
+         <div class ="div2">
+            2
+         </div>
+         <div class ="div3">
+             3
+          </div>        
+    </div>
+     <br>
+     <div>
+     <h1>
+        Tudo no centro com espaço determinado e quebra de linha sem altura definida
+     </h1>
+     </div>
+     <br>
+     <div class="container5">
+      <div class ="div1"> 
+         1
+      </div>
+      <div class ="div2">
+         2
+      </div>
+      <div class ="div3">
+          3
+       </div>
+       <div class ="div1"> 
+          1
+       </div>
+       <div class ="div2">
+          2
+       </div>
+       <div class ="div3">
+           3
+        </div>
+        <div class ="div1"> 
+          1
+       </div>
+       <div class ="div2">
+          2
+       </div>
+       <div class ="div3">
+           3
+        </div>
+        <div class ="div1"> 
+          1
+       </div>
+       <div class ="div2">
+          2
+       </div>
+       <div class ="div3">
+           3
+        </div>
+        <div class ="div1"> 
+          1
+       </div>
+       <div class ="div2">
+          2
+       </div>
+       <div class ="div3">
+           3
+        </div>
+        <div class ="div1"> 
+          1
+       </div>
+       <div class ="div2">
+          2
+       </div>
+       <div class ="div3">
+           3
+        </div>        
+  </div>
+</body>
+</html>
+
+<!-- 
+    Elemento pai a caixa e os elementos nele. 
+    Neste exemplo usamos a main como container pai 
+    e os elementos filhos que serao varias div 
+    
+    Por padrao a div tem como caracteristica ficar no canto esquerto superior 
+    e cada DIV ou TAG um embaixo do outro
+
+        .container {
+        display: flex;
+        }
+
+        O elemento pai informa que todas as div dentro deles agora tem q ficar uma do lado da outra
+        
+        codigo fonte padrao
+        .container{
+         display:flex;
+         flex-direction:row;
+         justify-content:center;
+         align-items:center;
+         flex-wrap:wrap;
+         aling-content: center;
+         row-gap:10px;
+         column-gap:30px;
+        }
+-->
